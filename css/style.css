@@ -136,3 +136,70 @@ hr{
     font-weight: bolder;
     text-transform: uppercase;
 }
+
+/* Portfolio section */
+
+.portfolio{
+    padding: 5rem 0 5rem;
+}
+
+.col-md-4 > .card > .card-header > img{
+    width: 100%;
+}
+
+.portfolio-card .card-header{
+    padding: 0;
+}
+
+.card .card-header{
+    background-color: white !important;
+}
+
+.card{
+    border: none !important;
+    background-color: white !important;
+    margin-bottom: 40px !important;
+}
+
+.card .card-header p {
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.card-header .overlay{
+    background-color: #ffd900c5;
+    position: absolute;
+    width: 350px;
+    height: 263px;
+    opacity: 0;
+    transition: .3s ease-in-out;
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+.overlay:hover::after{
+    content: '';
+    width: 7px;
+    height: 50px;
+    background-color: var(--whiteColor);
+    position: absolute;
+    margin: 100px 170px;
+    border-radius: 5px;
+}
+
+.overlay:hover::before{
+    content: '';
+    width: 7px;
+    height: 50px;
+    background-color: var(--whiteColor);
+    position: absolute;
+    margin: 100px 170px;
+    border-radius: 5px;
+    transform: rotate(90deg);
+}
