@@ -88,8 +88,9 @@
     width: 100%;
 }
 
-.fixed{
-    background-color: #1b1b1bfa !important;
+#nav.fixed{
+    background-color: #0a0a0af8 !important;
+    padding: 0;
 }
 
 #nav{
@@ -130,10 +131,9 @@ hr{
     margin: 10px auto 50px auto;
 }
 
-.services .container .text{
+.text{
     margin: 5rem auto auto auto;
     font-size: 2.3rem;
-    font-weight: bolder;
     text-transform: uppercase;
 }
 
@@ -145,6 +145,7 @@ hr{
 
 .col-md-4 > .card > .card-header > img{
     width: 100%;
+    height: 81%;
 }
 
 .portfolio-card .card-header{
@@ -168,12 +169,15 @@ hr{
 }
 
 .card-header .overlay{
-    background-color: #ffd900c5;
+    display: flex;
     position: absolute;
-    width: 350px;
-    height: 263px;
+    width: 100%;
+    height: 81%;
+    background: rgba(255, 200, 0, 0.9);
+    align-items: center;
+    justify-content: center;
     opacity: 0;
-    transition: .3s ease-in-out;
+    transition: opacity cubic-bezier(0,.58,.99,.5) 0.25s;
     -webkit-transition: .3s ease-in-out;
     -moz-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
@@ -189,7 +193,6 @@ hr{
     height: 50px;
     background-color: var(--whiteColor);
     position: absolute;
-    margin: 100px 170px;
     border-radius: 5px;
 }
 
@@ -202,4 +205,64 @@ hr{
     margin: 100px 170px;
     border-radius: 5px;
     transform: rotate(90deg);
+}
+
+/* About section */
+
+.about{
+    padding: 5rem 0 5rem;
+    height: 100vh;
+    background-color: #020113;
+    color: rgb(0, 255, 115);
+    height: 100vh;
+}
+
+.about .col-md-4{
+    margin: 4rem 2rem;
+}
+
+.about .col-md-4 img {
+    position: relative;
+    bottom: 85px;
+}
+
+.about .container .row .col-md-4:nth-child(2){
+    margin: 4rem -2rem;
+}
+
+.about .col-md-4 .info h4{
+    color: white;
+    font-size: 27px;
+    font-weight: 600;
+    border-bottom: 2px solid rgb(0, 255, 115);
+    margin-bottom: 20px;
+}
+
+.about .col-md-4 .info p{
+    letter-spacing: .5px;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.info ul li{
+    list-style: none;
+    color: white;
+    opacity: .7;
+    margin-bottom: 10px;
+}
+
+.info ul{
+    position: relative;
+    right: 39px;
+    width: 400px;
+}
+
+.info{
+    position: relative;
+    bottom: 80px;
+}
+
+.info i{
+    margin-right: 10px;
 }
