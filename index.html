@@ -5,47 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./aos-master/dist/aos.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>XamiWeb</title>
 </head>
 <body>
 
-    <div class="shadow"></div>
+    <!-- Loader -->
+    <div class="loading">
+        <div class="main">
+            <div class="dot">
+                <div class="dot2"></div>
+            </div>
+        </div>
+    </div>
+    <!-- /Loader -->
+
+
+    <!-- Navbar -->
     <nav id="nav" class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
         <!-- Brand -->
         <a class="navbar-brand" href="#">XamiWeb</a>
       
         <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span class="navbar-toggler-icon"></span>
+        <button onclick="navBack()" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
       
         <!-- Navbar links -->
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#">Home</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#services">Services</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Portfolio</a>
+              <a class="nav-link" href="#portfolio">Portfolio</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Contact</a>
+              <a class="nav-link" href="#about">About</a>
             </li>
           </ul>
         </div>
     </nav> 
+    <!-- /Navbar -->
 
+
+    <!-- Home -->
     <section class="home">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
                     <div class="titles">
-                        <p>Welcome to my WebSite!!!</p>
+                        <p>Welcome to my Website</p>
                         <h3>I'm Xamidullayev Ammoriddin</h3>
                         <div class="button">
                             <a target="_blank" href="https://github.com/ammoriddin">GitHub</a>
@@ -55,13 +70,16 @@
             </div>
         </div>
     </section>
+    <!-- /Home -->
 
-    <section class="services">
+
+    <!-- services -->
+    <section id="services" class="services">
         <div class="container">
             <h3 class="text text-center">Services</h3>
             <hr>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
                     <div class="card">
                         <div class="card-header">
                             <i class="fas fa-shopping-cart"></i>
@@ -77,7 +95,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
                     <div class="card">
                         <div class="card-header">
                             <i class="fa-solid fa-book-open-reader"></i>
@@ -93,7 +111,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000">
                     <div class="card">
                         <div class="card-header">
                             <i class="fa-solid fa-flag"></i>
@@ -111,13 +129,16 @@
             </div>
         </div>
     </section>
+    <!-- /services -->
 
-    <section class="portfolio">
+
+    <!-- portfolio -->
+    <section id="portfolio" class="portfolio">
         <h3 class="text text-center">Portfolio</h3>
         <hr>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-up" data-aos-duration="900">
                     <div class="card portfolio-card">
                         <div class="card-header">
                             <div class="overlay"></div>
@@ -126,7 +147,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-duration="900">
                     <div class="card portfolio-card">
                         <div class="card-header">
                             <div class="overlay"></div>
@@ -136,7 +157,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-down" data-aos-duration="900">
                     <div class="card portfolio-card">
                         <div class="card-header">
                             <div class="overlay"></div>
@@ -147,7 +168,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-down" data-aos-duration="900">
                     <div class="card portfolio-card">
                         <div class="card-header">
                             <div class="overlay"></div>
@@ -157,7 +178,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-duration="900">
                     <div class="card portfolio-card">
                         <div class="card-header">
                             <div class="overlay"></div>
@@ -167,7 +188,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="flip-up" data-aos-duration="900">
                     <div class="card portfolio-card">
                         <div class="card-header">
                             <div class="overlay"></div>
@@ -180,13 +201,16 @@
             </div>
         </div>
     </section>
+    <!-- /portfolio -->
 
-    <section class="about">
+
+    <!-- about -->
+    <section id="about" class="about">
         <h3 class="text text-center">About</h3>
         <hr>
         <div class="container">
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4" data-aos="zoom-in" data-aos-duration="1000">
                     <img class="w-100" src="./images/plane11.png" alt="me photo">
                 </div>
                 <div class="col-md-4">
@@ -198,18 +222,48 @@
                             m quibusdam soluta molestiae quia quis!
                         </p>
                         <ul>
-                            <li><i class="fa-solid fa-user"></i> Name: Ammoriddin</li>
-                            <li><i class="fa-solid fa-location-dot"></i> Location: Uzbekistan,Tashkent,Yunusobod</li>
-                            <li><i class="fa-solid fa-calendar"></i> Birthday: 24/may/2010</li>
-                            <li><i class="fa-regular fa-envelope"></i> Email: hakimjavoh@gmail.com</li>
+                            <li><i class="fa-solid fa-user"></i> <b>Name</b>: Ammoriddin</li>
+                            <li><i class="fa-solid fa-location-dot"></i> <b>Location</b>: Uzbekistan,Tashkent,Yunusobod</li>
+                            <li><i class="fa-solid fa-calendar"></i> <b>Birthday</b>: 24/may/2010</li>
+                            <li><i class="fa-regular fa-envelope"></i> <b>Email</b>: hakimjavoh@gmail.com</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- /about -->
+
+
+    <!-- footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="copyright">
+                        <p>Copyright ©2022 <span>Xamidullayev Ammoriddin</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="social-network">
+                        <a target="_blank" href="https://github.com/ammoriddin"><i class="fa-brands fa-instagram"></i></a>
+                        <a target="_blank" href="https://leetcode.com/Ammoriddin/"><i class="fa-solid fa-code"></i></a>
+                        <a target="_blank" href="hakimjavoh@gmail.com"><i class="fa-regular fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- /footer -->
+
 
     <script src="./js/bootstrap.min.js"></script>
+    <script src="./aos-master/dist/aos.js"></script>
     <script src="./js/app.js"></script>
+    <script>
+        AOS.init({
+            easing: "ease-in-out-sine"
+        }); 
+    </script>
 </body>
 </html>
